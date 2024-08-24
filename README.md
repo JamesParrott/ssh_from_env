@@ -6,13 +6,12 @@ This small script allows a (basic, slow) ssh log-in shell session to be created 
 I do not claim this is best practise.  Nor that it scales (vault services can be used to authenticate ssh certificates instead).  
 This script is only intended to be a simple mitigation to loss, theft and damage of physical devices.
 
-Users able to rely on managed physical copies of ssh key files, do not need this library at all.  For the rest of us, please note this not a hardened magic bullet to manage all your security issues.  Produce your own security model.  In particular this approach:
+Users able to rely on managed physical copies of ssh key files (i.e. users whose lost, damaged or stolen devices will be replaced for them), do not need this script at all.  For the rest of us, please note this not a hardened magic bullet to manage all your security issues.  Produce your own security model.  In particular this approach:
  a) delegates important security decisions to second and third parties, in no particular order: myself, my own infrastructure and dependency providers, and your chosen cloud vault service provider(s). This script is a trade off.  It is intended to make
  you less vulnerable to all your offices burning down or devices being stolen.  But as with moving anything from on-prem to the cloud,
  this is always at the cost of exposing you to others' vulnerabilities instead.
  b) the vault service(s) themselves must now be secured. By their very nature, credible providers have considered this at length, e.g. requiring password, and either a OTP or a recovery code (storing recovery codes on the devices instead of ssh key files, just shifts the
  problem to a different file, and adds only a little obscurity, not any extra security).
-
 
 
 ## Usage:
